@@ -122,7 +122,6 @@ console.log(`Just a regular string...`);
 console.log(`String
     multiple
     lines`);
- */
 
 const age = 15;
 
@@ -133,10 +132,15 @@ if (age >= 18) {
   console.log(`Sophia is too young. Wait another ${yearsLeft} years :)`);
 }
 
-const birthYear = 2001;
-century = 20;
+const birthYear = 2012;
+
+let century;
 if (birthYear <= 2000) {
-  let century = 20;
+  century = 20;
 } else {
-  let century = 21;
+  century = 21;
 }
+console.log(century);
+ */
+
+console.log(`This is a test`);
