@@ -236,14 +236,14 @@ const nazarene = {
   job: "Solution Architect",
   friends: ["Eunice", "Gail", "Glyzel"],
 };
-*/
+
 
 const nazarene = {
   firstName: "John Nazarene",
   lastName: "Dela Pisa",
   age: 2025 - 2001,
   job: "Solution Architect",
-  friends: ["Eunice", "Gail", "Glyzel"],
+  friends: ["Paolo", "Gail", "Glyzel"],
 };
 
 console.log(nazarene);
@@ -269,3 +269,54 @@ if (nazarene[interested]) {
     "Wrong request! Choose between firstName, lastName, age, job, and friends"
   );
 }
+
+nazarene.location = "Philippines";
+nazarene["twitter"] = "@JohnDelaPisa";
+console.log(nazarene);
+
+// Challenge
+// "John has 3 friends, and his best friend is called Paolo"
+console.log(`${nazarene.firstName} has ${nazarene.friends.length} friends, and his best friend is called ${nazarene.friends[0]}`);
+*/
+
+const nazarene = {
+  firstName: "John Nazarene",
+  lastName: "Dela Pisa",
+  birthYear: 2001,
+  job: "Solution Architect",
+  friends: ["Paolo", "Graham", "Antonio"],
+  hasDriversLicense: true,
+
+  // calcAge: function (birthYear) {
+  //   return 2025 - birthYear;
+  // },
+
+  // calcAge: function () {
+  //   console.log(this);
+  //   return 2025 - this.birthYear;
+  // },
+
+  calcAge: function () {
+    this.age = 2025 - this.birthYear;
+    return this.age;
+  },
+
+  getSummary: function () {
+    return `${this.firstName} is a ${this.calcAge()}-year-old ${
+      this.job
+    }, and he ${
+      this.hasDriversLicense ? "has" : "doesn't have"
+    } a driver's license`;
+  },
+};
+
+console.log(nazarene.calcAge());
+
+console.log(nazarene.age);
+console.log(nazarene.age);
+console.log(nazarene.age);
+
+console.log(nazarene.getSummary());
+
+// Challenge
+// "John is a 46-year-old Solution Architect, and he has a driver's license" or "John is a 46-year-old Solution Architect, and he doesn't have a driver's license
