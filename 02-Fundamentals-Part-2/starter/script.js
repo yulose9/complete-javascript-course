@@ -219,7 +219,7 @@ const calcTip = function (bill) {
 const bills = [125, 555, 44];
 const tips = [calcTip(bills[0]), calcTip(bills[1]), calcTip(bills[2])];
 const totals = [bills[0] + tips[0], bills[1] + tips[1], bills[2] + tips[2]];
-*/
+
 
 const nazareneArray = [
   "John Nazarene",
@@ -236,3 +236,36 @@ const nazarene = {
   job: "Solution Architect",
   friends: ["Eunice", "Gail", "Glyzel"],
 };
+*/
+
+const nazarene = {
+  firstName: "John Nazarene",
+  lastName: "Dela Pisa",
+  age: 2025 - 2001,
+  job: "Solution Architect",
+  friends: ["Eunice", "Gail", "Glyzel"],
+};
+
+console.log(nazarene);
+
+console.log(nazarene.lastName);
+console.log(nazarene["lastName"]);
+
+const nameKey = "Name";
+console.log(nazarene["first" + nameKey]);
+console.log(nazarene["last" + nameKey]);
+
+// console.log(nazarene.'last' + nameKey); // Error
+
+const interested = prompt(
+  "What do you want to know about Nazarene? Choose between firstName, lastName, age, job, and friends"
+);
+console.log(nazarene[interested]);
+
+if (nazarene[interested]) {
+  console.log(nazarene[interested]);
+} else {
+  console.log(
+    "Wrong request! Choose between firstName, lastName, age, job, and friends"
+  );
+}
