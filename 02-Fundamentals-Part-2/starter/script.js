@@ -277,7 +277,7 @@ console.log(nazarene);
 // Challenge
 // "John has 3 friends, and his best friend is called Paolo"
 console.log(`${nazarene.firstName} has ${nazarene.friends.length} friends, and his best friend is called ${nazarene.friends[0]}`);
-*/
+
 
 const nazarene = {
   firstName: "John Nazarene",
@@ -320,3 +320,140 @@ console.log(nazarene.getSummary());
 
 // Challenge
 // "John is a 46-year-old Solution Architect, and he has a driver's license" or "John is a 46-year-old Solution Architect, and he doesn't have a driver's license
+
+
+// console.log("Lifting weights repetition: 1 🏋️");
+// console.log("Lifting weights repetition: 2 🏋️");
+// console.log("Lifting weights repetition: 3 🏋️");
+// console.log("Lifting weights repetition: 4 🏋️");
+// console.log("Lifting weights repetition: 5 🏋️");
+// console.log("Lifting weights repetition: 6 🏋️");
+// console.log("Lifting weights repetition: 7 🏋️");
+// console.log("Lifting weights repetition: 8 🏋️");
+// console.log("Lifting weights repetition: 9 🏋️");
+// console.log("Lifting weights repetition: 10 🏋️");
+
+// for loop keep running while condition is TRUE
+for (let rep = 1; rep <= 10; rep++) {
+  console.log(`Lifting weights repetition: ${rep} 🏋️`);
+}
+
+
+const nazareneArray = [
+  "John Nazarene",
+  "Dela Pisa",
+  2025 - 2001,
+  "Solution Architect",
+  ["Eunice", "Gail", "Glyzel"],
+  false,
+];
+
+const types = [];
+
+for (let i = 0; i < nazareneArray.length; i++) {
+  console.log(nazareneArray[i], typeof nazareneArray[i]);
+
+  // Filling types array
+  // types[i] = typeof nazareneArray[i];
+  types.push(typeof nazareneArray[i]);
+}
+
+console.log(types);
+
+const years = [1991, 2007, 2004, 2001, 1998];
+const ages = [];
+
+for (let i = 0; i < years.length; i++) {
+  ages.push(2025 - years[i]);
+}
+
+console.log(ages);
+
+// continue and break
+console.log("--- ONLY STRINGS ---");
+for (let i = 0; i < nazareneArray.length; i++) {
+  if (typeof nazareneArray[i] !== "string") continue;
+
+  console.log(nazareneArray[i], typeof nazareneArray[i]);
+}
+
+console.log("--- BREAK WITH NUMBER ---");
+for (let i = 0; i < nazareneArray.length; i++) {
+  if (typeof nazareneArray[i] === "number") break;
+
+  console.log(nazareneArray[i], typeof nazareneArray[i]);
+}
+
+
+// Looping Backwards and Loops in Loops
+
+const nazareneArray = [
+  "John Nazarene",
+  "Dela Pisa",
+  2025 - 2001,
+  "Solution Architect",
+  ["Eunice", "Gail", "Glyzel"],
+  false,
+];
+
+for (let exercise = 1; exercise <= 3; exercise++) {
+  console.log(`--------- Starting exercise ${exercise} ---------`);
+
+  for (let rep = 1; rep <= 6; rep++) {
+    console.log(`Lifting weights repetition: ${rep} 🏋️`);
+  }
+}
+
+
+// for (let rep = 1; rep <= 10; rep++) {
+//   console.log(`Lifting weights repetition: ${rep} 🏋️`);
+// }
+
+// let rep = 1;
+// while (rep <= 10) {
+//   console.log(`WHILE: Lifting weights repetition: ${rep} 🏋️`);
+//   rep++;
+// }
+
+let dice = Math.trunc(Math.random() * 6) + 1;
+console.log(dice);
+
+while (dice !== 6) {
+  console.log(`You rolled a ${dice}`);
+  dice = Math.trunc(Math.random() * 6) + 1;
+
+  if (dice === 6) {
+    console.log("Loop is about to end...");
+  }
+}
+
+const calcTip = function (bill) {
+  return bill >= 50 && bill <= 300 ? bill * 0.15 : bill * 0.2;
+};
+
+const bills = [22, 295, 176, 440, 37, 105, 10, 1100, 86, 52];
+const tips = [];
+const totals = [];
+
+for (let i = 0; i < bills.length; i++) {
+  // Calculate tips
+  const tip = calcTip(bills[i]);
+  tips.push(tip);
+  // Calculate totals
+  totals.push(tip + bills[i]);
+}
+
+console.log("Bills:", bills);
+console.log("Tips:", tips);
+console.log("Totals:", totals);
+
+const calcAverage = function (arr) {
+  let sum = 0;
+  for (let i = 0; i < arr.length; i++) {
+    sum += arr[i];
+  }
+  return sum / arr.length;
+};
+
+console.log("Average Total:", calcAverage(totals));
+*/
